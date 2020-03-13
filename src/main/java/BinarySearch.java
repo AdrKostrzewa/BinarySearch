@@ -1,25 +1,38 @@
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 public class BinarySearch {
 
-    static int [] array ;
-//    static LinkedList <Double> list;
+
+    //    static LinkedList <Double> list;
+    Random r = new Random();
+    List<Integer> lista = new ArrayList<Integer>();
+    int[] array = new int[20];
+
+
+    void randomArray() {
+        for (int i = 0; i < array.length; i++) {
+            array[i] = r.nextInt(21);
+            array.toString();
+        }
+    }
+
+
+    void randomList(){
+        for (int i = 0; i < 21; i++){
+            lista.add(r.nextInt(21));
+        }
+    }
 
 
 
-//
 
 
 
     public static void main(String[] args) {
-        List<Integer> lista = new ArrayList<Integer>();
-        Random r = new Random();
-        for (int i = 0; i < 21; i++){
-            lista.add(r.nextInt(21));
-        }
-        System.out.println(lista);
+
+        BinarySearch binarySearch = new BinarySearch();
+        binarySearch.randomArray();
+        System.out.println(Arrays.toString(binarySearch.array));
+
     }
 }
